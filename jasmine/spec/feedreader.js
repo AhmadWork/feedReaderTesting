@@ -61,10 +61,10 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-var menu = $('body').hasClass('menu-hidden');
+
         it('is hidden by default', function() {
-            expect(menu).toBe(true);
-            //consider testing x>0 position of menu
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+            
         });
 
          /* A  test that ensures the menu changes
@@ -79,9 +79,9 @@ var menu = $('body').hasClass('menu-hidden');
         
         it('toggles when clicked', function(){
             Menuclicked();  
-            expect(menu).toBe(false);
-            clickMenu();
-            expect(menu).toBe(true);     
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+        Menuclicked();
+            expect($('body').hasClass('menu-hidden')).toBe(true);     
         });
 
        
@@ -98,9 +98,9 @@ describe('Initial Entries', function(){
                 done();
             });
         });
-        var feed=$('.feed').find('.entry');
-        it('has atleast one entry on load', function(done){
-            expect( feed.length ).toBeGreaterThan(0);
+     
+        it(' at least one entry on load', function(done){
+            expect( $('.feed').find('.entry').length ).toBeGreaterThan(0);
             done();
         });
     });
@@ -136,7 +136,7 @@ describe('Initial Entries', function(){
             done();
         });
     /* A second test that ensures that the new feed is actually new/ not identical to the last one.*/
-        it('loaded feeds are not identical', function(done){
+        it('loaded feeds  not identical', function(done){
             expect( $('.feed').html() ).not.toEqual(container);
             done(); 
         });
