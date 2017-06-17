@@ -14,17 +14,18 @@ RSS Feeds
 •	Checks if all feed names are defined.
 
 •	Checks if all feeds names are not empty.
-The Menu
+<br /> The Menu
 
 •	Makes sure the menu is hidden by default when the page loads.
 
 •	Makes sure the menu displays when the icon is clicked
 
 •	Makes sure hides when the icon is clicked again.
-Initial Entries
+
+<br /> Initial Entries
 
 •	Makes sure there is at least one article loaded on the page when a new feed is loaded.
-New Feed Selection
+<br /> New Feed Selection
 
 •	Makes sure the content of the page changes when a new feed loads.
 
